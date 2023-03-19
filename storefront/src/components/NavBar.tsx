@@ -1,20 +1,24 @@
 import { NavLink } from "react-router-dom";
 import { ReactSVG } from "react-svg";
 import menu from "../assets/menu-icon.svg";
+import close from "../assets/close-icon.svg";
+import { useState } from "react";
 
 export default function NavBar() {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    if (clicked) {
+      setClicked(false);
+    } else {
+      setClicked(true);
+    }
+  };
+
   return (
     <nav
       className="
-        flex flex-wrap
-        items-center
-        justify-between
-        w-full
-        py-4
-        md:py-0
-        px-4
-        text-lg text-gray-700
-        bg-white"
+      flex items-center justify-between px-4 py-3"
     >
       <div>
         <h1 className="font-bold font-mono">
@@ -22,39 +26,45 @@ export default function NavBar() {
         </h1>
       </div>
 
+      <img
+        src={clicked ? close : menu}
+        className="h-6 w-6 cursor-pointer md:hidden block"
+        onClick={handleClick}
+      />
+
       <div
-        className="hidden w-full md:flex md:items-center md:w-auto"
-        id="menu"
+        className={
+          "md:flex flex-grow justify-center" + (clicked ? " flex" : " hidden")
+        }
       >
         <ul
           className="
               text-base text-gray-800
               pt-4
               md:flex
-              md:justify-between
-              md:pt-0"
+              md:justify-center
+              md:pt-0
+              md:bg-rose-100
+              md:w-full"
         >
-          <li className="font-semibold md:p-4 py-2 block hover:text-pink-800">
+          <li className="mt-1 block px-2 py-1 font-semibold rounded hover:bg-rose-300">
             <NavLink to="/Necklaces"> Necklaces </NavLink>
           </li>
-          <li className="font-semibold md:p-4 py-2 block hover:text-pink-800">
+          <li className="mt-1 block px-2 py-1 font-semibold rounded hover:bg-rose-300">
             <NavLink to="/Earrings"> Earrings </NavLink>
           </li>
-          <li className="font-semibold md:p-4 py-2 block hover:text-pink-800">
+          <li className="mt-1 block px-2 py-1 font-semibold rounded hover:bg-rose-300">
             <NavLink to="/Bracelets"> Bracelets </NavLink>
           </li>
-          <li className="font-semibold md:p-4 py-2 block hover:text-pink-800">
+          <li className="mt-1 block px-2 py-1 font-semibold rounded hover:bg-rose-300">
             <NavLink to="/Other Accessories"> Other Accessories </NavLink>
           </li>
         </ul>
-      </div>
-
-      <div>
-        <p> Check Out </p>
-      </div>
-
-      <div>
-        <img src={menu} className="xl:hidden w-10 h-10 " />
+        <ul className="md:flex md:justify-end md:bg-rose-200 md:w-1/6">
+          <li className="mt-1 block px-2 py-1 font-semibold rounded hover:bg-rose-300">
+            <NavLink to="/Shopping Cart"> Check Out </NavLink>
+          </li>
+        </ul>
       </div>
     </nav>
   );
