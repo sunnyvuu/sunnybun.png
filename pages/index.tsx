@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Product, FooterBanner, HeroBanner } from "../components";
+
 export const Home = () => {
   return (
     <div>
