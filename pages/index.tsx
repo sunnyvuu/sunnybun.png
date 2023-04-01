@@ -14,10 +14,11 @@ export const Home = (props: {
 }) => {
   const { productData, bannerData, catData } = props;
   console.log(bannerData);
+  console.log(bannerData[0].smallText);
 
   return (
     <div>
-      <HeroBanner catFactData={catData} />
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
 
       <div className="text-center py-5">
         <h2 className="text-3xl font-bold text-red-800 py-2">
