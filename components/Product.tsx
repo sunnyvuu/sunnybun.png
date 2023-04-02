@@ -6,5 +6,5 @@ interface ProductProps {
 }
 
 export default function Product(props: ProductProps) {
-  return <div className="text-red-800">{props.label}</div>;
+  return <div>{props.label}</div>;
 }
