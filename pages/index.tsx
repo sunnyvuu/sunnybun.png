@@ -13,18 +13,16 @@ export const Home = (props: {
   catData: CatFact;
 }) => {
   const { productData, bannerData, catData } = props;
-  console.log(bannerData);
-  console.log(bannerData[0].smallText);
 
   return (
     <div>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
 
-      <div className="text-center py-5">
-        <h2 className="text-3xl font-bold text-red-800 py-2">
-          Best Selling Products
-        </h2>
-        <p className="text-stone-500 text-lg">Super Cute Jewelry</p>
+      <div className="text-center mt-40px mr-0">
+        <h2 className="text-4xl font-extrabold">Best Selling Products</h2>
+        <p className="text-stone-500 text-base font-extralight">
+          Super Cute Jewelry
+        </p>
       </div>
       <div className="flex justify-evenly">
         {productData?.map((product: any) => product.name)}
