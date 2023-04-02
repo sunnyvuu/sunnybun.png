@@ -60,7 +60,7 @@ const HeroBanner = (props: { heroBanner: bannerDataItem }) => {
             {" "}
             Description{" "}
           </h5>
-          <p className="mt-2 ml-5 mr-10 mb-10 font-extralight text-end w-96 text-base">
+          <p className="mt-2 ml-5 mr-10 mb-10 font-extralight text-end w-96 text-base text-slate-100">
             {heroBanner.desc}
           </p>
         </div>
