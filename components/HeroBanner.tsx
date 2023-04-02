@@ -27,10 +27,8 @@ type bannerDataItem = {
 
 const HeroBanner = (props: { heroBanner: bannerDataItem }) => {
   const { heroBanner } = props;
-  console.log(urlFor(heroBanner.image));
-
   return (
-    <div className="flex justify-between pt-1 pr-4 relative bg-slate-400 m-10 rounded-xl">
+    <div className="flex justify-between pt-1 pr-4 relative bg-slate-400 m-7 rounded-xl">
       <div>
         <p className="m-18px m-10 text-2xl">{heroBanner.smallText}</p>
         <h3 className="mt-4px text-5xl m-10 font-medium">
