@@ -1,6 +1,7 @@
 import React from "react";
 import { Product, FooterBanner, HeroBanner, Footer } from "../components";
 import { client } from "../lib/client";
+import banner from "@/sanity/schemas/banner";
 
 type CatFact = {
   fact: string;
@@ -30,7 +31,7 @@ export const Home = (props: {
           <Product key={product._id} product={product} />
         ))}
       </div>
-      <FooterBanner />
+      <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </div>
   );
 };
