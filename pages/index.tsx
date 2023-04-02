@@ -13,6 +13,7 @@ export const Home = (props: {
   catData: CatFact;
 }) => {
   const { productData, bannerData, catData } = props;
+  console.log(productData);
 
   return (
     <div>
@@ -25,7 +26,9 @@ export const Home = (props: {
         </p>
       </div>
       <div className="flex justify-evenly">
-        {productData?.map((product: any) => product.name)}
+        {productData?.map((product: any) => (
+          <Product key={product._id} product={product} />
+        ))}
       </div>
       <FooterBanner />
     </div>
