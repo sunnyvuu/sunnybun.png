@@ -8,16 +8,17 @@ export default function Product(props: { product: any }) {
 
   return (
     <div>
-      <Link href={`/product/${slug.current}`}></Link>
-      <div>
-        <img
-          src={urlFor(image && image[0]) as unknown as string}
-          width={250}
-          height={250}
-        />
-        <p>{name}</p>
-        <p>${price}</p>
-      </div>
+      <Link href={`/product/${slug.current}`}>
+        <div>
+          <img
+            src={urlFor(image && image[0]) as unknown as string}
+            width={250}
+            height={250}
+          />
+          <p>{name}</p>
+          <p>${price}</p>
+        </div>
+      </Link>
     </div>
   );
 }
