@@ -20,8 +20,8 @@ export const Home = (props: {
     <div>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
 
-      <div className="text-center mt-40px mr-0">
-        <h2 className="text-4xl font-extrabold">Best Selling Products</h2>
+      <div className="text-center mt-40px mb-10 mr-0">
+        <h2 className="text-5xl font-extrabold">Best Selling Products</h2>
         <p className="text-stone-500 text-base font-extralight">
           Super Cute Jewelry
         </p>
