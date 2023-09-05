@@ -14,6 +14,7 @@ export default function Product(props: { product: any }) {
             src={urlFor(image && image[0]) as unknown as string}
             width={250}
             height={250}
+            className="rounded-md  "
           />
           <p>{name}</p>
           <p>${price}</p>
