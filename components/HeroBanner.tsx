@@ -46,7 +46,7 @@ const HeroBanner = (props: { heroBanner: bannerDataItem }) => {
         className="-m-[17rem] max-h-[70rem] rotate-[6deg] -z-[1]"
       />
 
-      <div className="">
+      <div>
         <Link href={`/product/ID${heroBanner.product}`}>
           <button
             className="m-10 rounded-full px-6 py-4 bg-sky-100 text-sky-800 border-none text-xl font-bold shadow-sky-500 shadow-[0_5px_25px_-15px_rgba(0,0,0,0.3)] "
